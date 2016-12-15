@@ -1,5 +1,5 @@
 {
-  "name": "lightweight",
+  "name": "yarnboilerplate",
   "version": "1.0.0",
   "description": "Test on simple setup with Yarn-only scripts",
   "main": "index.js",
@@ -21,6 +21,12 @@
     "styles:watch": "npm run styles -- -w",
     "styles": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers '> 5%' --postcss-cssnext.warnForDuplicates 0 -u postcss-url -u postcss-reporter -u cssnano -o dist/styles/main.min.css src/styles/main.css",
     "watch": "npm-run-all --parallel --silent *:watch"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-eb",
+    "rules": {
+      "indentation": 2
+    }
   },
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
