@@ -1,0 +1,14 @@
+@import '_importme';
+
+body {
+  color: var(--mainColor);
+}
+
+p {
+  & .headline {
+    font-size: 2rem;
+  }
+  &:hover {
+    color: blue;
+  }
+}
