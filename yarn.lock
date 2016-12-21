@@ -1740,6 +1740,10 @@ eazy-logger@3.0.2:
   dependencies:
     tfunk "^3.0.1"
 
+eb-colors@ebudvikling/eb-colors:
+  version "1.0.2"
+  resolved "https://codeload.github.com/ebudvikling/eb-colors/tar.gz/5789b87457994a31bd58752b63f93a5121a82ed0"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"

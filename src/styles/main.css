@@ -1,14 +1,15 @@
-@import '_importme';
+/* Import Colors */
+@import "../../node_modules/eb-colors/dist/eb-colors.css";
 
-body {
-  color: var(--mainColor);
-}
+/* Variables */
+@import "partials/_base";
+@import "partials/_reset";
+@import "partials/_forms";
+@import "partials/_layout";
+@import "partials/_typography";
 
-p {
-  & .headline {
-    font-size: 2rem;
-  }
-  &:hover {
-    color: red;
-  }
-}
+/* Production specific code here */
+@import "partials/_production";
+
+/* Mobile version */
+@import "partials/_mobile";

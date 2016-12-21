@@ -5,6 +5,6 @@ import testFunc from './_importme'
 
 (function () {
   let ecmascriptest = 'world'
-  const header = document.getElementsByTagName('h1')[0]
+  const header = document.getElementsByClassName('article-widget-header--text')[0]
   header.innerHTML = testFunc() + ` ${ecmascriptest}`
 })()

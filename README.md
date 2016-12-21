@@ -1,6 +1,6 @@
-# Yarn / NPM boilerplate
+# EB Embed Template 2017
 
-Multipurpose lightweight Yarn/NPM boilerplate with integrated [Babel](https://babeljs.io/), [cssnano](http://cssnano.co/), [cssnext](http://cssnext.io/), Pug and BrowserSync support.
+This is the new template for smaller productions like calculators in EB.dk.
 
 To install [Yarn](https://yarnpkg.com/) (or NPM) using [HomeBrew](http://brew.sh/):
 ```bash
