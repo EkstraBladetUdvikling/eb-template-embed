@@ -9,6 +9,6 @@ p {
     font-size: 2rem;
   }
   &:hover {
-    color: blue
+    color: red;
   }
 }
