@@ -88,6 +88,10 @@ html {
       }
     }
 
+    & b {
+      font-weight: bold;
+    }
+
     & textarea {
       resize: none;
       min-height: 140px;
