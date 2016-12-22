@@ -1,6 +1,6 @@
 {
   "name": "eb-embed-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for smaller productions like calculators for EB.dk",
   "main": "index.js",
   "author": "Mikkel Jensen (EB)",
