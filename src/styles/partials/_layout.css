@@ -45,6 +45,9 @@ html {
   }
 
   &-content {
+    & button {
+      text-align: center;
+    }
     & button,
     & input,
     & textarea {
