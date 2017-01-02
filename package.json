@@ -19,8 +19,8 @@
     "scripts": "browserify src/scripts/main.js -t [ babelify --presets [ latest ] ] | uglifyjs -mc -o dist/scripts/main.min.js",
     "start": "npm run --silent watch & browser-sync start --server 'dist' --no-open --files 'dist/**/*'",
     "start:tunnel": "npm start -- --tunnel",
-    "styles:watch": "npm run styles -- -w",
-    "styles": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers '> 5%' --postcss-cssnext.warnForDuplicates 0 -u postcss-url -u postcss-reporter -u cssnano -o dist/styles/main.min.css src/styles/main.css",
+    "styles:watch": "npm run styles -- -w --map",
+    "styles": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers '> 5%' --no-postcss-cssnext.warnForDuplicates -u postcss-url -u postcss-reporter -u cssnano --no-cssnano.zindex -o dist/styles/main.min.css src/styles/main.css",
     "watch": "npm-run-all --parallel --silent *:watch"
   },
   "stylelint": {
