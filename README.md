@@ -18,6 +18,7 @@ Command           | Output
 yarn start        | Starts browser-sync and watches changes in styling, javascript and HTML
 yarn start:tunnel | Same as yarn start, but sets up a public tunnel
 yarn lint         | Lints styling and javascript using [Stylelint](http://stylelint.io/) and [ESLint](http://eslint.org/)
+yarn test         | Run test using [Karma](https://karma-runner.github.io) and [Jasmine](https://jasmine.github.io/)
 yarn run markup   | Outputs HTML from [Pug](https://github.com/pugjs/pug) files
 yarn run scripts  | Outputs ES5-compliant javascript using a combination of Browserify and Babel
 yarn run styles   | Outputs styles using [PostCSS](http://postcss.org/),[cssnano](http://cssnano.co/) and [cssnext](http://cssnext.io/)
