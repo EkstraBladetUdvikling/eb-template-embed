@@ -18,7 +18,7 @@
     "scripts:watch": "watchify src/scripts/main.js -t [ babelify --presets [ latest ] ] -o dist/scripts/main.min.js -dv",
     "scripts": "browserify src/scripts/main.js -t [ babelify --presets [ latest ] ] | uglifyjs -m -c drop_console=true -o dist/scripts/main.min.js",
     "start": "npm run --silent watch & browser-sync start --server 'dist' --no-open --files 'dist/**/*'",
-    "start:tunnel": "npm start -- --tunnel",
+    "start:tunnel": "npm start -- --tunnel='embedtest'",
     "styles:watch": "npm run styles -- -w",
     "styles": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers '> 5%' --no-postcss-cssnext.warnForDuplicates -u postcss-url -u postcss-reporter -u cssnano --no-cssnano.zindex -o dist/styles/main.min.css src/styles/main.css",
     "watch": "npm-run-all --parallel --silent *:watch",
