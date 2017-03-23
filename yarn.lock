@@ -3295,13 +3295,13 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@>=3.10.0, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0:
-  version "4.17.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
-
 lodash@^3.10.1, lodash@^3.8.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
+lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0:
+  version "4.17.2"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
 log-symbols@^1.0.2:
   version "1.0.2"
@@ -3946,13 +3946,6 @@ postcss-attribute-case-insensitive@^1.0.1:
   dependencies:
     postcss "^5.1.1"
     postcss-selector-parser "^2.2.0"
-
-postcss-bem-linter@^2.1.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/postcss-bem-linter/-/postcss-bem-linter-2.6.0.tgz#4ebe21b064b230da78dc3965da4497117501a3b6"
-  dependencies:
-    postcss "^5.0.0"
-    postcss-resolve-nested-selector "^0.1.1"
 
 postcss-calc@^5.0.0, postcss-calc@^5.2.0:
   version "5.3.1"
@@ -5450,16 +5443,7 @@ stylelint-scss@^1.4.1:
     postcss-value-parser "^3.3.0"
     stylelint "^7.0.3"
 
-stylelint-selector-bem-pattern@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-selector-bem-pattern/-/stylelint-selector-bem-pattern-1.0.0.tgz#9420e1bb8fe5e014547f91aedb635ab5df86b070"
-  dependencies:
-    lodash ">=3.10.0"
-    postcss "^5.0.19"
-    postcss-bem-linter "^2.1.0"
-    stylelint ">=3.0.2"
-
-stylelint@>=3.0.2, stylelint@^7.0.3, stylelint@^7.6.0:
+stylelint@^7.0.3, stylelint@^7.6.0:
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-7.6.0.tgz#ddeb06ccc95f72c119fcde5e85439fb7e9cde4df"
   dependencies:

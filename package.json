@@ -59,7 +59,6 @@
     "stylelint": "^7.6.0",
     "stylelint-config-eb": "github:EkstraBladetUdvikling/stylelint-config-eb",
     "stylelint-scss": "^1.4.1",
-    "stylelint-selector-bem-pattern": "^1.0.0",
     "uglify-js": "latest",
     "watchify": "^3.8.0"
   }
