@@ -45,9 +45,11 @@ html {
   }
 
   &-content {
+
     & button {
       text-align: center;
     }
+
     & button,
     & input,
     & textarea {
@@ -83,6 +85,7 @@ html {
     & p,
     & label {
       padding: 7px;
+
       & input {
         margin-right: calc(var(--eb-base-spacing) / 2);
       }
@@ -111,6 +114,7 @@ html {
   &-footer {
     padding: 0 10px;
     text-align: center;
+
     & a {
       font-weight: 700;
     }
