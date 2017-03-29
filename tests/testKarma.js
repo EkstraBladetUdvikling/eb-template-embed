@@ -8,7 +8,13 @@ describe('default test', function () {
     window.ebmodule.init()
 
     /* Run Test(s) */
-    // expect(document.getElementsByClassName('article-widget-header--text')[0].innerHTML)
-    //  .toEqual('Hallo world')
+    expect(document.getElementsByClassName('article-widget-header--text')[0].innerHTML)
+      .toEqual('Hallo world')
+  })
+
+  /* Additional test (DOM already loaded) */
+  it('it should return private variable', function () {
+    expect(window.ebmodule.privilegedMethod())
+      .toEqual('foo')
   })
 })

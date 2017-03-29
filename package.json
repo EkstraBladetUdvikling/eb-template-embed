@@ -1,5 +1,5 @@
 {
-  "name": "eb-redmark-quiz-know",
+  "name": "eb-embed-template",
   "version": "1.0.1",
   "description": "Boilerplate for smaller productions like calculators for EB.dk",
   "main": "index.js",
@@ -56,7 +56,7 @@
     "postcss-reporter": "latest",
     "postcss-url": "latest",
     "pug-cli": "latest",
-    "stylelint": "^7.9.0",
+    "stylelint": "^7.6.0",
     "stylelint-config-eb": "github:EkstraBladetUdvikling/stylelint-config-eb",
     "stylelint-scss": "^1.4.1",
     "uglify-js": "latest",
