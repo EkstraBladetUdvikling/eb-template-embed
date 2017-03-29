@@ -1,20 +1,7 @@
 /* Mobile only styling */
 @media (max-width: 480px) {
 
-  .article-widget {
-    margin: 32px 5px 10px;
-
-    &-header {
-      font-size: 20px;
-    }
-
-    &-footer {
-      font-size: 13px;
-      margin: 0 10px 10px;
-
-      a {
-        font-weight: normal;
-      }
-    }
+  .empty {
+    display: none;
   }
 }

@@ -1,29 +1,31 @@
-- var title = "Titel her"
+- var title = "Kendskabsquiz"
 doctype html
 html(lang="en")
-  head
-    title= title
-    base(target="_blank")
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet')
-    link(href='styles/main.min.css', rel='stylesheet')
-  body
-    .article-widget
-      h3.article-widget-header
-        //- http://fontawesome.io/icons/
-        .article-widget-icon.fa.fa-question
-        span.article-widget-header--text= title
-      .article-widget-content
-        .left-container: button Ja
-        .right-container: button Nej
-        p Nej. Det er imod god dansk kø-kultur
-        label(for="checkbox_id")
-          input(type='checkbox', id="checkbox_id", checked)
-          | Fuldstændig enig
-        input(type="text", placeholder='Hello dd')
-        input.no-border-bottom(type="text", placeholder='Placeholder 2')
-    p.article-widget-footer: a(href='#') Send dit spørgsmål
-    script(src="scripts/main.min.js")
-    script.
-      window.ebmodule.init()
+    head
+        title= title
+        base(target="_blank")
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+        link(href='styles/main.min.css', rel='stylesheet')
+    body
+        .eb-article-widget: .eb-quiz-card
+            figure.eb-quiz-card-front
+                h3.eb-article-widget-header
+                .eb-article-widget-content
+                  p.eb-quiz-question
+                  .eb-left-column: button.eb-quiz-left-button
+                  .eb-right-column: button.eb-quiz-right-button
+            figure.eb-quiz-card-back
+                p.eb-quiz-answer
+                p Hvad synes du?
+                ul.eb-quiz-emojifeedback
+                  li &#x1F612;
+                  li &#x1F616;
+                  li &#x1F60D;
+                  li &#x1F61C;
+                  li &#x1F622;
+                button.eb-quiz-share Del på face
+        include _facebook
+        script(src="scripts/main.min.js")
+        script.
+            window.ebmodule.init()

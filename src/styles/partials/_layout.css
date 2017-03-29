@@ -3,120 +3,94 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-.article-widget {
+.eb-article-widget {
   position: relative;
-  border: 1px solid var(--eb-color--graa6);
-  margin: 32px 5px 10px;
+  min-height: 250px;
+  perspective: 800px;
+  overflow: auto;
 
-  &-icon {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    margin-left: -22px;
-    border-radius: 50%;
+  & .eb-left-column {
+    float: left;
+    width: 50%;
+    padding: 1rem 1rem 0 0;
+    box-sizing: border-box;
+  }
+
+  & .eb-right-column {
+    float: right;
+    padding: 1rem 0 0;
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+
+/* Flip animation */
+.eb-quiz-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  transition: transform 1s;
+
+  & figure {
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 0;
     display: block;
-    font-size: 27px;
-    font-style: normal;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &-front {
+    background: rgba(0, 0, 0, .1);
+  }
+
+  &-back {
+    background: rgba(0, 0, 0, .1);
+    transform: rotateY(180deg);
+  }
+
+  & .eb-quiz-answer {
+    /* Default incorrect */
+    background: red;
+
+    &.eb-correct {
+      background: green;
+    }
+  }
+
+  & .eb-quiz-emojifeedback {
     text-align: center;
-    height: var(--eb-article-widget-icon-width);
-    line-height: var(--eb-article-widget-icon-width);
-    width: var(--eb-article-widget-icon-width);
-    background-color: var(--eb-color--bruger);
-    color: white;
-  }
+    padding: 1rem;
+    box-sizing: border-box;
+    user-select: none;
 
-  &-header {
-    line-height: 1em;
-    padding: 0 20px 20px;
-    text-align: center;
-    font-size: 23px;
-    padding: 0 10px 10px;
-    background-color: var(--eb-color--graa6);
+    & li {
+      margin-right: -4px;
+      padding: 0;
+      font-size: 50px;
+      display: inline-block;
+      width: 20%;
+      cursor: pointer;
+      transition: transform .5s;
 
-    &--text {
-      display: block;
-      line-height: 1em;
-      padding-top: 32px;
-    }
-  }
-
-  & .no-border-bottom {
-    border-bottom: none;
-  }
-
-  &-content {
-
-    & button {
-      text-align: center;
-    }
-
-    & button,
-    & input,
-    & textarea {
-      border-left: none;
-      border-right: none;
-    }
-
-    & .left-container {
-      float: left;
-    }
-
-    & .right-container {
-      float: right;
-
-      & button,
-      & input,
-      & textarea {
-        border-left: var(--fh-border-color) 1px solid;
+      &:hover {
+        transform: scale(1.4);
       }
     }
-
-    & .left-container,
-    & .right-container {
-      box-sizing: border-box;
-      width: 50%;
-    }
-
-    & .right-container + div,
-    & .right-container + p {
-      clear: both;
-    }
-
-    & p,
-    & label {
-      padding: 7px;
-
-      & input {
-        margin-right: calc(var(--eb-base-spacing) / 2);
-      }
-    }
-
-    & b {
-      font-weight: bold;
-    }
-
-    & textarea {
-      resize: none;
-      min-height: 140px;
-    }
-
-    & hr {
-      border: none;
-      border-top: var(--fh-border-color) 1px solid;
-    }
-
-    & img {
-      width: 100%;
-    }
-
   }
 
-  &-footer {
-    padding: 0 10px;
-    text-align: center;
+  &.flipped {
+    /* Result when clicking */
 
-    & a {
-      font-weight: 700;
-    }
+    transform: translateX(-100%) rotateY(-180deg);
   }
+}
+
+button {
+  text-align: center;
+  font-weight: bold;
 }

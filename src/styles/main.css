@@ -8,8 +8,5 @@
 @import "partials/_layout";
 @import "partials/_typography";
 
-/* Production specific code here */
-@import "partials/_production";
-
 /* Mobile version */
 @import "partials/_mobile";
