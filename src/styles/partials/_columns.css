@@ -3,6 +3,7 @@
   display: -ms-flexbox;
   overflow: hidden;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .eb-flexbox .eb-col {
