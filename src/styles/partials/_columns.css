@@ -1,0 +1,21 @@
+.eb-flexbox {
+  display: flex;
+  display: -ms-flexbox;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.eb-flexbox .eb-col {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  -ms-flex: 1;
+}
+
+@media (max-width: 480px) {
+
+  .eb-flexbox .eb-col {
+    flex-basis: 100%;
+  }
+}
+
