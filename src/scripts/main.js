@@ -41,3 +41,4 @@ window.ebmodule = (function () {
     }
   }
 })()
+window.ebmodule.init()
