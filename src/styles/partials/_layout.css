@@ -57,29 +57,12 @@ html {
       border-right: none;
     }
 
-    & .left-container {
-      float: left;
-    }
-
-    & .right-container {
-      float: right;
-
+    & .eb-col:first-child {
       & button,
       & input,
       & textarea {
-        border-left: var(--fh-border-color) 1px solid;
+        border-right: var(--fh-border-color) 1px solid;
       }
-    }
-
-    & .left-container,
-    & .right-container {
-      box-sizing: border-box;
-      width: 50%;
-    }
-
-    & .right-container + div,
-    & .right-container + p {
-      clear: both;
     }
 
     & p,

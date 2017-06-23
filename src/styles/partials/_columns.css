@@ -15,8 +15,7 @@
 
 @media (max-width: 480px) {
 
-  .eb-flexbox .eb-col {
+  .eb-flexbox .eb-col:not(.eb-no-collapse) {
     flex-basis: 100%;
   }
 }
-

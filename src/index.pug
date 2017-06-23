@@ -15,8 +15,9 @@ html(lang="en")
         .article-widget-icon.fa.fa-question
         span.article-widget-header--text= title
       .article-widget-content
-        .left-container: button Ja
-        .right-container: button Nej
+        .eb-flexbox
+          .eb-col.eb-no-collapse: button Ja
+          .eb-col.eb-no-collapse: button Nej
         p Nej. Det er imod god dansk kø-kultur
         label(for="checkbox_id")
           input(type='checkbox', id="checkbox_id", checked)

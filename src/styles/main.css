@@ -6,6 +6,7 @@
 @import "partials/_reset";
 @import "partials/_forms";
 @import "partials/_layout";
+@import "partials/_columns";
 @import "partials/_typography";
 
 /* Production specific code here */
