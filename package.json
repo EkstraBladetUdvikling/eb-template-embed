@@ -32,15 +32,19 @@
     }
   },
   "eslintConfig": {
-    "extends": ["standard"],
-    "plugins": ["standard"],
+    "extends": [
+      "standard"
+    ],
+    "plugins": [
+      "standard"
+    ],
     "env": {
       "browser": true,
       "node": true
     },
     "parserOptions": {
-       "ecmaVersion": 6
-     }
+      "ecmaVersion": 6
+    }
   },
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
@@ -68,9 +72,9 @@
     "postcss-reporter": "latest",
     "postcss-url": "latest",
     "pug-cli": "latest",
-    "stylelint": "^7.6.0",
-    "stylelint-config-eb": "github:EkstraBladetUdvikling/stylelint-config-eb",
-    "stylelint-scss": "^1.4.1",
+    "stylelint": "latest",
+    "stylelint-config-eb": "latest",
+    "stylelint-scss": "latest",
     "uglify-js": "latest",
     "watchify": "^3.8.0"
   }
