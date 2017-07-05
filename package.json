@@ -31,6 +31,17 @@
       "indentation": 2
     }
   },
+  "eslintConfig": {
+    "extends": ["standard"],
+    "plugins": ["standard"],
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+       "ecmaVersion": 6
+     }
+  },
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
     "babelify": "^7.3.0",
