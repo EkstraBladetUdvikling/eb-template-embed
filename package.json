@@ -73,7 +73,7 @@
     "postcss-url": "latest",
     "pug-cli": "latest",
     "stylelint": "latest",
-    "stylelint-config-eb": "latest",
+    "stylelint-config-eb": "github:EkstraBladetUdvikling/stylelint-config-eb",
     "stylelint-scss": "latest",
     "uglify-js": "latest",
     "watchify": "^3.8.0"
