@@ -57,9 +57,9 @@ window.ebmodule = (function () {
               </div>
               <p>Nej. Det er imod god dansk kø-kultur</p>
               <label for="checkbox_id">
-                <input type="checkbox" id="checkbox_id" checked />Fuldstændig enig
+                <input type="checkbox" id="checkbox_id" />Fuldstændig enig
               </label>
-              <input class="no-border-bottom" type="text" placeholder="Placeholder 1" value=${state.text} oninput=${actions.update} />
+              <input class="no-border-bottom" type="text" placeholder="Placeholder 1" oninput=${e => actions.updateText(e.target.value)} />
               <input class="no-border-bottom" type="text" placeholder="Placeholder 2" />
             </div>
           </div>`
@@ -67,7 +67,7 @@ window.ebmodule = (function () {
         actions: {
           add: state => ({counter: state.counter + 1}),
           sub: state => ({counter: state.counter - 1}),
-          update: state => ({text: 'test'})
+          updateText: (state, actions, text) => ({text})
         }
       })
     },
