@@ -1,6 +1,6 @@
 .article-widget {
 
-  &-content {
+  & .article-widget-content {
     color: black;
   }
 }

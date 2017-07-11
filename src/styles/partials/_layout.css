@@ -32,6 +32,7 @@ html {
     font-size: 23px;
     padding: 0 10px 10px;
     background-color: var(--eb-color--graa6);
+    position: relative;
 
     &--text {
       display: block;
