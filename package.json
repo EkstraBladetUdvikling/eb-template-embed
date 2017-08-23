@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "build": "npm run clean && npm run lint && npm run styles && npm run scripts && npm run markup:build && npm test -- --single-run && echo 'Allow from all' >> dist/.htaccess",
-    "deploy": "npm run build && git commit -a -m '[autocommit]' && git push && open http://teamcity00.buildhost-prod.jppol.net/project.html?projectId=Eb_EbInteraktiv_Features",
     "clean": "rm -rf dist/ && mkdir dist && mkdir dist/styles && mkdir dist/scripts",
     "install": "curl https://raw.githubusercontent.com/EkstraBladetUdvikling/editorconfig/master/.editorconfig > .editorconfig && npm run clean",
     "lint:scripts": "eslint src/scripts/**/*.js",
@@ -17,7 +16,7 @@
     "markup:watch": "npm run markup -- -w --pretty",
     "markup": "pug src/index.pug --out dist",
     "scripts:watch": "watchify src/scripts/main.js -t [ babelify --presets [ latest ] ] -o dist/scripts/main.min.js -dv",
-    "scripts": "browserify src/scripts/main.js -t [ babelify --presets [ latest ] ] | uglifyjs -m -c drop_console=true -o dist/scripts/main.min.js",
+    "scripts": "browserify src/scripts/main.js -t [ babelify --presets [ latest ] ] | uglifyjs -m -o dist/scripts/main.min.js",
     "start": "npm run --silent watch & browser-sync start --server 'dist' --no-open --files 'dist/**/*'",
     "start:tunnel": "npm start -- --tunnel='embedtest'",
     "styles:watch": "npm run styles -- -w",
