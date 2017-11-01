@@ -1,6 +1,6 @@
 {
   "name": "eb-embed-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Boilerplate for smaller productions like calculators for EB.dk",
   "main": "index.js",
   "author": "Mikkel Jensen (EB)",
@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npm run clean && npm run lint && npm run styles && npm run scripts && npm run markup:build && npm test -- --single-run && echo 'Allow from all' >> dist/.htaccess",
     "clean": "rm -rf dist/ && mkdir dist && mkdir dist/styles && mkdir dist/scripts",
-    "install": "curl https://raw.githubusercontent.com/EkstraBladetUdvikling/editorconfig/master/.editorconfig > .editorconfig && npm run clean",
+    "install": "npm run clean",
     "lint:scripts": "eslint src/scripts/**/*.js",
     "lint:styles": "stylelint src/styles/**/*.css --config stylelint-config-eb",
     "lint": "npm-run-all --parallel --silent lint:*",
@@ -45,13 +45,15 @@
       "ecmaVersion": 6
     }
   },
+  "dependencies": {
+    "eb-colors": "ebudvikling/eb-colors"
+  },
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.5",
     "browserify": "^13.1.1",
     "cssnano": "latest",
-    "eb-colors": "ebudvikling/eb-colors",
     "eslint": "^3.12.1",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
