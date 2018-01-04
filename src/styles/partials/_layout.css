@@ -57,7 +57,7 @@ html {
       border-right: none;
     }
 
-    & .eb-col:first-child {
+    & .eb-col:not(:last-child) {
       & button,
       & input,
       & textarea {
