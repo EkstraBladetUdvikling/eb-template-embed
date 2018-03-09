@@ -1,82 +1,26 @@
 {
   "name": "eb-embed-template",
-  "version": "1.0.3",
-  "description": "Boilerplate for smaller productions like calculators for EB.dk",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description":
+    "This is the template for embedable EB Interactive productions",
+  "main": "scripts/main.ts",
   "author": "Mikkel Jensen (EB)",
   "license": "MIT",
   "scripts": {
-    "build": "npm run clean && npm run lint && npm run styles && npm run scripts && npm run markup:build && echo 'Allow from all' >> dist/.htaccess",
-    "clean": "rm -rf dist/ && mkdir dist && mkdir dist/styles && mkdir dist/scripts",
-    "install": "npm run clean",
-    "lint:scripts": "eslint src/scripts/**/*.js",
-    "lint:styles": "stylelint src/styles/**/*.css --config stylelint-config-eb",
-    "lint": "npm-run-all --parallel --silent lint:*",
-    "markup:build": "npm run markup -- --obj '{ \"build\": true }'",
-    "markup:watch": "npm run markup -- -w --pretty",
-    "markup": "pug src/index.pug --out dist",
-    "scripts:watch": "watchify src/scripts/main.js -t [ babelify --presets [ latest ] ] -o dist/scripts/main.min.js -dv",
-    "scripts": "browserify src/scripts/main.js -t [ babelify --presets [ latest ] ] | uglifyjs -m -o dist/scripts/main.min.js",
-    "start": "npm run --silent watch & browser-sync start --server 'dist' --no-open --files 'dist/**/*'",
-    "start:tunnel": "npm start -- --tunnel='embedtest'",
-    "styles:watch": "npm run styles -- -w",
-    "styles": "postcss -u postcss-import -u postcss-cssnext --postcss-cssnext.browsers '> 5%' --no-postcss-cssnext.warnForDuplicates -u postcss-url -u postcss-reporter -u cssnano --no-cssnano.zindex -o dist/styles/main.min.css src/styles/main.css",
-    "watch": "npm-run-all --parallel --silent *:watch",
-    "test": "npm run markup && karma start"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-eb",
-    "rules": {
-      "indentation": 2
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "standard"
-    ],
-    "plugins": [
-      "standard"
-    ],
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6
-    }
-  },
-  "dependencies": {
-    "eb-colors": "ebudvikling/eb-colors"
+    "dist":
+      "npm run clean && npm run lint:scripts && parcel build src/index.html && echo 'Allow from all' >> dist/.htaccess",
+    "clean": "rm -rf dist/ && mkdir dist",
+    "prettier": "prettier src/**/*  --write --single-quote",
+    "start": "parcel src/index.html -p 3000",
+    "lint:scripts": "tslint -c tslint.json 'src/**/*.ts'",
+    "build": "npm run dist"
   },
   "devDependencies": {
-    "babel-preset-latest": "^6.16.0",
-    "babelify": "^7.3.0",
-    "browser-sync": "^2.18.5",
-    "browserify": "^13.1.1",
-    "cssnano": "latest",
-    "eslint": "^3.12.1",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.3.0",
-    "karma-browserify": "^5.1.0",
-    "karma-cli": "^1.0.1",
-    "karma-html2js-preprocessor": "^1.1.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "npm-run-all": "latest",
-    "postcss": "latest",
-    "postcss-cli": "^2.6.0",
-    "postcss-cssnext": "latest",
-    "postcss-import": "latest",
-    "postcss-reporter": "latest",
-    "postcss-url": "latest",
-    "pug-cli": "latest",
-    "stylelint": "latest",
-    "stylelint-config-eb": "github:EkstraBladetUdvikling/stylelint-config-eb",
-    "stylelint-scss": "latest",
-    "uglify-js": "latest",
-    "watchify": "^3.8.0"
+    "parcel-bundler": "^1.5.1",
+    "postcss-cssnext": "^3.1.0",
+    "prettier": "1.10.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.8.0",
+    "typescript": "^2.7.2"
   }
 }

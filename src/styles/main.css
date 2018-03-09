@@ -1,16 +1,11 @@
-/* Import Colors */
-@import "../../node_modules/eb-colors/dist/eb-colors.css";
+/*
+postcss transforms files before it imports them
+https://github.com/parcel-bundler/parcel/issues/329
+*/
 
-/* Variables */
-@import "partials/_base";
-@import "partials/_reset";
-@import "partials/_forms";
-@import "partials/_layout";
-@import "partials/_columns";
-@import "partials/_typography";
+@import "./partials/reset";
+@import "./partials/layout";
+@import "./partials/columns";
+@import "./partials/mobile";
 
-/* Production specific code here */
-@import "partials/_production";
-
-/* Mobile version */
-@import "partials/_mobile";
+/* Production specific styling */
