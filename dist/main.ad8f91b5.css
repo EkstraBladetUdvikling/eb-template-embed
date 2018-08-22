@@ -1,0 +1,583 @@
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain) */
+
+/* Modified to pass github:ebudvikling/stylelint-config-eb  */
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Default setup */
+:root {
+  --eb-font-regular: 400;
+  --eb-font-bold: bold;
+
+  /* Base Font */
+  --eb-base-font-family: Arial, sans-serif;
+  --eb-base-font-weight: var(--font-regular);
+  --eb-base-font-size: 16px;
+  --eb-base-line-height: 1.4;
+
+  /* Padding, margin and optimal widths */
+  --eb-base-spacing: 1rem;
+  --eb-base-section-width: 730px;
+  --eb-article-widget-icon-width: 44px;
+  --eb-article-widget-icon-font-size: 20px;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--eb-base-font-family);
+  font-size: var(--eb-base-font-size);
+}
+
+body {
+  font-size: var(--eb-base-font-size);
+}
+
+h3 {
+  font-weight: var(--eb-font-bold);
+}
+
+p {
+  font-size: var(--eb-base-font-size);
+  line-height: var(--eb-base-line-height);
+}
+
+strong {
+  font-weight: var(--eb-font-bold);
+}
+
+a {
+  color: #4fa8df;
+  text-decoration: none;
+}
+
+/* FormHack v1.2.0 (formhack.io)
+*/
+/* stylelint-disable */
+
+/* Config ----------------------------- */
+:root {
+  /* Font */
+  --fh-font-family: var(--eb-base-font-family);
+  --fh-font-size: var(--eb-base-font-size);
+  --fh-font-color: black;
+
+  /* Borders */
+  --fh-border-radius: 0;
+  --fh-border-width: 1px;
+  --fh-border-style: solid;
+  --fh-border-color: #e5e5e5;
+
+  /* Inputs, Textareas, Select, Option */
+  --fh-input-height: 40px;
+  --fh-input-width: 100%;
+  --fh-input-max-width: 100%;
+  --fh-input-bg-color: white;
+  --fh-focus-bg-color: white;
+  --fh-focus-border-color: var(--fh-border-color);
+  --fh-focus-font-color: var(--fh-font-color);
+
+  /* Select Vendor Styling */
+  --fh-select-vendor-styling: none; /* comment this out to maintain vendor styling */
+
+  /* Buttons & Input Submits */
+  --fh-button-height: 40px;
+  --fh-button-width: 100%;
+  --fh-button-max-width: var(--fh-input-max-width);
+  --fh-button-font-color: var(--fh-font-color);
+  --fh-button-bg-color: #f7f7f7;
+  --fh-button-hover-bg-color: #4fa8df;
+  --fh-button-hover-font-color: white;
+
+  /* Layout */
+  --fh-layout-display: block;
+  --fh-layout-margin: 0; /* change to "10px auto" to center */
+  --fh-layout-text-align: left;
+}
+
+/* Global Reset Styles ------------------ */
+
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+  box-sizing: border-box;
+  outline: none;
+
+  font-family: var(--fh-font-family);
+  font-size: var(--fh-font-size);
+  color: var(--fh-font-color);
+  vertical-align: top;
+
+  display: var(--fh-layout-display);
+  margin: var(--fh-layout-margin);
+  text-align: var(--fh-layout-text-align);
+}
+
+datalist {
+  font-family: var(--fh-font-family);
+  font-size: var(--fh-font-size);
+}
+
+label {
+  display: var(--fh-layout-display);
+  margin: var(--fh-layout-margin);
+  text-align: var(--fh-layout-text-align);
+}
+
+/* Input & Textarea ------------------ */
+
+/* Fields with standard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list],
+input[type="file"],
+select,
+textarea {
+  width: var(--fh-input-width);
+  max-width: var(--fh-input-max-width);
+  padding: calc(var(--fh-input-height) / 5);
+  background-color: var(--fh-input-bg-color);
+
+  border-radius: var(--fh-border-radius);
+  border-width: var(--fh-border-width);
+  border-style: var(--fh-border-style);
+  border-color: var(--fh-border-color);
+}
+
+/* Fields with standard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] {
+  height: var(--fh-input-height);
+  -webkit-appearance: none;
+}
+
+/* Other */
+
+textarea {
+  -webkit-appearance: none;
+  overflow: auto;
+}
+
+input[type="range"] {
+  height: var(--fh-input-height);
+  width: var(--fh-input-width);
+  max-width: var(--fh-input-max-width);
+}
+
+input[type="file"] {
+  min-height: var(--fh-input-height);
+}
+
+input[type="search"] {
+  height: var(--fh-input-height);
+  -webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* For checkbox and radio to be centered, need to wrap the input and label in a span -
+/* .checkbox-container {
+/*  display: block;
+/*  text-align: center;
+/* }
+/* Select ------------------ */
+
+select {
+  height: var(--fh-input-height);
+
+  -webkit-appearance: var(--fh-select-vendor-styling, menulist);
+  -moz-appearance: var(--fh-select-vendor-styling, menulist);
+  -ms-appearance: var(--fh-select-vendor-styling, menulist);
+  -o-appearance: var(--fh-select-vendor-styling, menulist);
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select[multiple] {
+  height: auto;
+  min-height: var(--fh-input-height);
+  padding: 0;
+}
+
+select[multiple] option {
+  margin: 0;
+  padding: calc(var(--fh-input-height) / 5);
+}
+
+/* Fieldset ------------------ */
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+  font-weight: inherit;
+}
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+  height: var(--fh-button-height);
+  width: var(--fh-button-width);
+  max-width: var(--fh-button-max-width);
+  background-color: var(--fh-button-bg-color);
+  padding: calc(var(--fh-input-height) / 5);
+  cursor: pointer;
+
+  color: var(--fh-button-font-color);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border-radius: var(--fh-border-radius);
+  border-width: var(--fh-border-width);
+  border-style: var(--fh-border-style);
+  border-color: var(--fh-border-color);
+}
+
+input[type="image"] {
+  text-align: center;
+  padding: calc(var(--fh-input-height) / 5);
+}
+
+/* States ------------------ */
+
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+  cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus {
+  background-color: var(--fh-focus-bg-color);
+  border-color: var(--fh-focus-border-color);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: var(--fh-focus-border-color) solid 2px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  background-color: var(--fh-button-hover-bg-color);
+  color: var(--fh-button-hover-font-color);
+}
+
+.article-widget {
+  position: relative;
+  border: 1px solid var(--fh-border-color);
+  margin: 32px 5px 10px;
+}
+.article-widget-icon {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  margin-left: -22px;
+  border-radius: 50%;
+  display: block;
+  font-size: 27px;
+  font-style: normal;
+  text-align: center;
+  height: var(--eb-article-widget-icon-width);
+  line-height: var(--eb-article-widget-icon-width);
+  width: var(--eb-article-widget-icon-width);
+  background-color: var(--fh-button-hover-bg-color);
+  color: white;
+}
+
+.article-widget-header {
+  line-height: 1em;
+  padding: 0 20px 20px;
+  text-align: center;
+  font-size: 23px;
+  padding: 0 10px 10px;
+  background-color: var(--fh-border-color);
+}
+.article-widget-header--text {
+  display: block;
+  line-height: 1em;
+  padding-top: 32px;
+}
+
+.article-widget .no-border-bottom {
+  border-bottom: none;
+}
+
+.article-widget-content button {
+  text-align: center;
+}
+
+.article-widget-content button,
+.article-widget-content input,
+.article-widget-content textarea {
+  border-left: none;
+  border-right: none;
+}
+
+.article-widget-content .eb-col:not(:last-child) button,
+.article-widget-content .eb-col:not(:last-child) input,
+.article-widget-content .eb-col:not(:last-child) textarea {
+  border-right: var(--fh-border-color) 1px solid;
+}
+
+.article-widget-content p,
+.article-widget-content label {
+  padding: 7px;
+}
+.article-widget-content label input {
+  margin-right: calc(var(--eb-base-spacing) / 2);
+}
+
+.article-widget-content b {
+  font-weight: bold;
+}
+
+.article-widget-content textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+.article-widget-content hr {
+  border: none;
+  border-top: var(--fh-border-color) 1px solid;
+}
+
+.article-widget-content img {
+  width: 100%;
+}
+
+.article-widget-footer {
+  padding: 0 10px;
+  text-align: center;
+}
+.article-widget-footer a {
+  font-weight: 700;
+}
+.eb-flexbox {
+  display: flex;
+  display: -ms-flexbox;
+  overflow: hidden;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.eb-flexbox .eb-col {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  -ms-flex: 1;
+}
+
+@media (max-width: 480px) {
+
+  .eb-flexbox .eb-col:not(.eb-no-collapse) {
+    flex-basis: 100%;
+  }
+}
+/* Mobile only styling */
+@media (max-width: 480px) {
+  .article-widget {
+    margin: 32px 5px 10px;
+  }
+  .article-widget-header {
+    font-size: 20px;
+  }
+
+  .article-widget-footer {
+    font-size: 13px;
+    margin: 0 10px 10px;
+  }
+  .article-widget-footer a {
+    font-weight: normal;
+  }
+}
+/*
+postcss transforms files before it imports them
+https://github.com/parcel-bundler/parcel/issues/329
+*/
+
+/* Production specific styling */

@@ -1,7 +1,9 @@
 class EbFeatureClass {
   constructor() {
-    const titleTextElem: HTMLElement = document.querySelector('.article-widget-header--text')
-    titleTextElem.innerText = 'Test Title'
+    const titleTextElem: HTMLElement = document.querySelector(
+      '.article-widget-header--text'
+    );
+    titleTextElem.innerText = 'Test Title';
   }
 }
 
