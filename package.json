@@ -1,6 +1,6 @@
 {
   "name": "eb-embed-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the template for embedable EB Interactive productions",
   "main": "scripts/main.ts",
   "author": "Mikkel Jensen (EB)",
@@ -14,6 +14,7 @@
     "build": "npm run dist"
   },
   "devDependencies": {
+    "@ekstra-bladet/eb-colors": "latest",
     "parcel-bundler": "^1.9.7",
     "postcss-custom-properties": "^7.0.0",
     "prettier": "1.14.2",

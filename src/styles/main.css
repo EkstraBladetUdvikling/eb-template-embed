@@ -1,7 +1,6 @@
-/*
-postcss transforms files before it imports them
-https://github.com/parcel-bundler/parcel/issues/329
-*/
+/* Dependencies */
+
+@import "./../../node_modules/@ekstra-bladet/eb-colors/dist/eb-colors-css-vars.css";
 
 @import './partials/reset';
 @import './partials/layout';
