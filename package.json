@@ -6,7 +6,7 @@
   "author": "Mikkel Jensen (EB)",
   "license": "MIT",
   "scripts": {
-    "dist": "npm run clean && npm run lint:scripts && parcel build src/index.html --no-source-maps --public-url ./ && echo 'Allow from all' >> dist/.htaccess",
+    "dist": "npm run clean && npm run prettier && npm run lint:scripts && parcel build src/index.html --no-source-maps --public-url ./ && echo 'Allow from all' >> dist/.htaccess",
     "clean": "rm -rf dist/ && mkdir dist",
     "prettier": "prettier src/**/*  --write --single-quote",
     "start": "parcel src/index.html -p 3000",
