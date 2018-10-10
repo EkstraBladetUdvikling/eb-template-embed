@@ -1,10 +1,14 @@
 /* Dependencies */
 
-@import "./../../node_modules/@ekstra-bladet/eb-colors/dist/eb-colors-css-vars.css";
+@import './../../node_modules/@ekstra-bladet/eb-colors/dist/eb-colors-css-vars.css';
 
 @import './partials/reset';
 @import './partials/layout';
 @import './partials/columns';
 @import './partials/mobile';
+
+h1 {
+  color: var(--eb-color--bruger);
+}
 
 /* Production specific styling */
