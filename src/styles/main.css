@@ -7,8 +7,9 @@
 @import './partials/columns';
 @import './partials/mobile';
 
-h1 {
-  color: var(--eb-color--bruger);
-}
-
 /* Production specific styling */
+
+/* White SVG icon from Nounproject - Base64 encoded by b64.io */
+.article-widget-icon {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwIDIwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE0LDBINkM0LjMsMCwzLDEuMywzLDN2MTRjMCwxLjcsMS4zLDMsMywzaDhjMS43LDAsMy0xLjMsMy0zVjNDMTcsMS4zLDE1LjcsMCwxNCwweiBNOSwxNHYtMmgydjJIOXogTTExLDE2djJIOXYtMkgxMXogICBNMTEsOHYySDlWOEgxMXogTTE1LDh2MmgtMlY4SDE1eiBNNywxMEg1VjhoMlYxMHogTTUsMTJoMnYySDVWMTJ6IE0xMywxMmgydjJoLTJWMTJ6IE02LDJoOGMwLjYsMCwxLDAuNCwxLDF2M0g1VjMgIEM1LDIuNCw1LjQsMiw2LDJ6IE01LDE3di0xaDJ2Mkg2QzUuNCwxOCw1LDE3LjYsNSwxN3ogTTE0LDE4aC0xdi0yaDJ2MUMxNSwxNy42LDE0LjYsMTgsMTQsMTh6Ij48L3BhdGg+PC9zdmc+);
+}
