@@ -1,45 +1,51 @@
 class EbFeatureClass {
-  private desktopUrl: string;
-  private mobileUrl: string;
+  private productionName = 'eb-unnamed'; // Set DIV id to productionname to enable height
+  private trackingData = {
+    eventAction: '2019-' + this.productionName,
+    eventCategory: 'EB interaktiv',
+    eventLabel: 'First interaction',
+    eventNint: 0,
+    eventValue: 0
+  };
+  private firstInteraction: boolean = false;
+  private completeInteraction: boolean = false;
 
   /**
    * Init production
    */
   constructor() {
-    this.desktopUrl = this.getParameterByName('desktopurl');
-    this.mobileUrl = this.getParameterByName('mobileurl');
-
-    // Create image
-    const target: HTMLDivElement = document.querySelector('.eb-image-loader');
-    const imageElem: HTMLImageElement = document.createElement('img');
-    if (window.innerWidth > 480 || !this.mobileUrl) {
-      // Desktop
-      imageElem.src = this.desktopUrl;
-    } else {
-      // Mobil (full width image)
-      imageElem.src = this.mobileUrl;
-      imageElem.style.width = '100%';
-    }
-
-    target.appendChild(imageElem);
+    this.updateHeight();
   }
 
   /**
-   * Get parameters from URL
-   * @param name query
+   * Tracks the first interaction once
    */
-  private getParameterByName(name) {
-    const url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
-    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
-    const results = regex.exec(url);
-    if (!results) {
-      return null;
+  private trackFirstInteraction(): void {
+    if (!this.firstInteraction) {
+      parent.postMessage(this.trackingData, '*');
+      this.firstInteraction = true;
     }
-    if (!results[2]) {
-      return '';
+  }
+
+  /**
+   * Tracks the final / complete action once
+   */
+  private trackCompleteInteraction(): void {
+    if (!this.completeInteraction) {
+      this.trackingData.eventLabel = 'Completed interaction';
+      parent.postMessage(this.trackingData, '*');
+      this.completeInteraction = true;
     }
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  /**
+   * Update height on parent
+   */
+  private updateHeight(): void {
+    parent.postMessage(
+      'token:#' + this.productionName + ',height:' + String(document.documentElement.offsetHeight),
+      '*'
+    );
   }
 }
 
