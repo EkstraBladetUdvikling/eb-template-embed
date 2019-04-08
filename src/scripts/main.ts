@@ -43,7 +43,10 @@ class EbFeatureClass {
    */
   private updateHeight(): void {
     parent.postMessage(
-      'token:#' + this.productionName + ',height:' + String(document.documentElement.offsetHeight),
+      'token:#' +
+        this.productionName +
+        ',height:' +
+        String(document.documentElement.offsetHeight),
       '*'
     );
   }

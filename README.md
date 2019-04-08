@@ -12,6 +12,7 @@ brew install yarn
 Install all dependencies:
 
 ```node
+git clone git@github.com:EkstraBladetUdvikling/eb-template-embed.git
 yarn install
 ```
 
@@ -23,8 +24,3 @@ You now have the following options:
 | yarn run lint:scripts | Lints javascript using [TSLint](https://palantir.github.io/tslint/)                                     |
 | yarn run prettier     | Clear up all files using [Prettier](https://prettier.io/)
 | yarn run dist         | Clears dist directory and builds the app using [ParcelJS](https://parceljs.org/)                        |
-
-##### Implementation instructions
-
-1. Build using `yarn run dist`
-2. Next step...

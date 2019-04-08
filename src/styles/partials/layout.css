@@ -41,7 +41,7 @@ strong {
 }
 
 a {
-  color: var(--eb-color--bruger);
+  color: var(--color--bruger);
   text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ a {
   --fh-border-radius: 0;
   --fh-border-width: 1px;
   --fh-border-style: solid;
-  --fh-border-color: var(--eb-color--graa6);
+  --fh-border-color: var(--color--graa6);
 
   /* Inputs, Textareas, Select, Option */
   --fh-input-height: 40px;
@@ -79,9 +79,9 @@ a {
   --fh-button-width: 100%;
   --fh-button-max-width: var(--fh-input-max-width);
   --fh-button-font-color: var(--fh-font-color);
-  --fh-button-bg-color: var(--eb-color--graa7);
-  --fh-button-hover-bg-color: var(--eb-color--bruger);
-  --fh-button-hover-font-color: var(--eb-color--white);
+  --fh-button-bg-color: var(--color--graa7);
+  --fh-button-hover-bg-color: var(--color--bruger);
+  --fh-button-hover-font-color: var(--color--white);
 
   /* Layout */
   --fh-layout-display: block;
